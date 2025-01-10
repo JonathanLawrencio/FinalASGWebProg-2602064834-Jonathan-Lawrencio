@@ -15,9 +15,7 @@ class RegisterController extends Controller
         return view('registerView', compact('price'));
     }
 
-    /**
-     * Menyimpan data registrasi ke session dan mengarahkan ke halaman payment.
-     */
+ 
     public function store(Request $request)
     {
         // Validasi data input
@@ -42,5 +40,4 @@ class RegisterController extends Controller
         // Arahkan user ke halaman payment
         return redirect()->route('payment.form')->with('success', 'Registration data saved. Please proceed to payment.');
     }
-
 }

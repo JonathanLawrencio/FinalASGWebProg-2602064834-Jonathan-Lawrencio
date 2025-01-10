@@ -4,7 +4,6 @@
 <div class="container mt-5">
     <h2 class="text-center">{{ __('messages.character_store') }}</h2>
 
-    <!-- Navigation without JavaScript -->
     <ul class="nav nav-pills justify-content-center mt-4">
         <li class="nav-item">
             <a href="{{ route('avatars.index', ['tab' => 'store']) }}"

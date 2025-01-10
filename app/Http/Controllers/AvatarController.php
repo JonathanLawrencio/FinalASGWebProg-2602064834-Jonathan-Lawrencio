@@ -9,9 +9,7 @@ use Illuminate\Http\Request;
 
 class AvatarController extends Controller
 {
-    /**
-     * Tampilkan halaman avatar store dan collection.
-     */
+   
     public function index(Request $request)
     {
         $tab = $request->query('tab', 'store');
@@ -33,9 +31,6 @@ class AvatarController extends Controller
     }
 
 
-    /**
-     * Proses pembelian avatar.
-     */
     public function purchase(Request $request)
     {
         $customerId = session('customer_id');
@@ -62,9 +57,6 @@ class AvatarController extends Controller
         return back()->with('success', __('messages.avatar_purchased_successfully'));
     }
 
-    /**
-     * Proses unggah avatar baru.
-     */
     public function upload(Request $request)
     {
         $request->validate([
@@ -83,7 +75,7 @@ class AvatarController extends Controller
         $photoName = time() . '.' . $request->image->extension();
         $request->image->move($storagePath, $photoName);
 
-        // Simpan avatar ke database
+      
         Avatar::create([
             'name' => $request->name,
             'image_path' => 'avatars/' . $photoName,
@@ -93,12 +85,7 @@ class AvatarController extends Controller
         return back()->with('success', 'New avatar uploaded successfully!');
     }
 
-    /**
-     * Proses equip avatar sebagai foto profil.
-     */
-    /**
-     * Proses equip avatar sebagai foto profil.
-     */
+   
     public function equip(Request $request)
     {
         $customerId = session('customer_id');

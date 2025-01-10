@@ -32,7 +32,7 @@
     }
 
     .like-btn.active {
-        color: #28a745; /* Warna hijau */
+        color: #28a745; 
     }
 </style>
 

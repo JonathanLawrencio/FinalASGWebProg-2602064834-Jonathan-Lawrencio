@@ -122,6 +122,6 @@ return [
     'topup_success' => 'Isi ulang berhasil! 100 koin telah ditambahkan ke akun Anda.',
 
     // customerDetail
-'customer_detail' => 'Detail Pelanggan',
+    'customer_detail' => 'Detail Pelanggan',
 
 ];

@@ -14,8 +14,8 @@ return new class extends Migration {
             $table->id();
             $table->unsignedBigInteger('customer_id'); // Customer yang menerima notifikasi
             $table->unsignedBigInteger('sender_id'); // Customer yang mengirimkan friend request
-            $table->string('message'); // Isi notifikasi
-            $table->boolean('is_read')->default(false); // Status notifikasi
+            $table->string('message'); 
+            $table->boolean('is_read')->default(false); 
             $table->timestamps();
 
             // Foreign key constraints

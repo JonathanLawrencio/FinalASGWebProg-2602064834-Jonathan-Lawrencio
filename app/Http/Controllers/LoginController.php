@@ -8,17 +8,13 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    /**
-     * Menampilkan halaman login.
-     */
+  
     public function showLoginForm()
     {
         return view('loginView');
     }
 
-    /**
-     * Proses login.
-     */
+   
     public function login(Request $request)
     {
         // Validasi input
@@ -45,9 +41,7 @@ class LoginController extends Controller
     }
 
 
-    /**
-     * Logout pengguna.
-     */
+   
     public function logout()
     {
         // Hapus semua data session

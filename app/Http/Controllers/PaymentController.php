@@ -8,9 +8,7 @@ use App\Models\Customer;
 
 class PaymentController extends Controller
 {
-    /**
-     * Menampilkan form pembayaran.
-     */
+  
     public function showPaymentForm()
     {
         $price = Session::get('price');
@@ -25,9 +23,7 @@ class PaymentController extends Controller
         return view('form', compact('price', 'overpaidAmount'));
     }
 
-    /**
-     * Memproses pembayaran.
-     */
+ 
     public function processPayment(Request $request)
     {
         // Validasi input pembayaran
@@ -70,9 +66,7 @@ class PaymentController extends Controller
         return $this->completeRegistration($price, 0); // Tidak ada saldo wallet
     }
 
-    /**
-     * Menyelesaikan proses registrasi.
-     */
+   
     private function completeRegistration($price, $walletBalance)
     {
         $userData = Session::get('user_data');

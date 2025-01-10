@@ -8,9 +8,7 @@ use Illuminate\Support\Facades\Session;
 
 class CoinController extends Controller
 {
-    /**
-     * Menampilkan form top-up koin.
-     */
+   
     public function showTopUpForm()
     {
         $customerId = session('customer_id');
@@ -19,9 +17,7 @@ class CoinController extends Controller
         return view('topupView', compact('currentCoins'));
     }
 
-    /**
-     * Memproses top-up koin.
-     */
+   
     public function processTopUp(Request $request)
     {
         $customerId = session('customer_id');
